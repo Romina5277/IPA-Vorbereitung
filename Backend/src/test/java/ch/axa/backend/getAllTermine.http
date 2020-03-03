@@ -1,0 +1,4 @@
+GET http://localhost:8080/rest/termin/termine
+Accept: application/json
+
+###

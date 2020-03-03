@@ -1,0 +1,28 @@
+type Query {
+    termine: [Termin]
+    termin(id: String): Termin
+}
+
+type Mutation {
+    createTermin(input: CreateTerminInput): Termin
+    editTermin(input: EditTerminInput): Termin
+    deleteTermin(id: String): Boolean
+    copyTermin(id: String): Termin
+}
+
+type Termin {
+    id: String
+    name: String
+    time: String
+}
+
+input CreateTerminInput {
+    name: String
+    time: String
+}
+
+input EditTerminInput {
+    id: String
+    name: String
+    time: String
+}
